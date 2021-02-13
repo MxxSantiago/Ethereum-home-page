@@ -1,0 +1,39 @@
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'variables';
+
+html{
+    width: 100%;
+    font-size: 20px;
+    font-family: brother-1816, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.contenedor{
+    display: grid;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(5,20%);
+    grid-template-rows: 10vh 90vh 30vh 90vh 30vh 90vh 20vh;
+    grid-template-areas:
+     "headerr headerr headerr headerr headerr"
+     "p_main p_main p_main p_main p_main"
+     "p_artc p_artc p_artc p_artc p_artc"
+     "s_main s_main s_main s_main s_main"
+     "s_artc s_artc s_artc s_artc s_artc"
+     "f_main f_main f_main f_main f_main"
+     "footer footer footer footer footer";
+}
+
+
+      

@@ -1,0 +1,36 @@
+// Color variables
+$firstColor: #48BFE3;
+$secondColor: #66f3cb;
+$thirdColor: rgb(102, 148, 209);
+$refColor: rgb(201, 245, 248);
+
+// Device variables
+$tablet-width: 768px;
+$phone-width: 375px;
+$sDesktop-width: 1024px;
+$bDesktop-width: 1200px;
+
+@mixin sDesktop {
+    @media (min-width: #{$sDesktop-width})  and (max-width: #{$bDesktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width})  and (max-width: #{$sDesktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (min-width: 0px) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+.on{
+    transform: translateY(0);
+}
+.off{
+    transform: translateY(-300px);
+}
